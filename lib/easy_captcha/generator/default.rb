@@ -55,9 +55,7 @@ module EasyCaptcha
       def blur? #:nodoc:
         @blur
       end
-      def background_color=(color)
-        @image_background_color = color
-      end
+
       # generate image
       def generate(code)
         require 'rmagick' unless defined?(Magick)
