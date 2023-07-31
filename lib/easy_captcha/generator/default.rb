@@ -30,7 +30,7 @@ module EasyCaptcha
       attr_accessor :font_size, :font_fill_color, :font, :font_family, :font_stroke, :font_stroke_color
 
       # Background
-      attr_accessor :image_background_color, :background_image
+      # attr_accessor :image_background_color, :background_image
 
       # Sketch
       attr_accessor :sketch, :sketch_radius, :sketch_sigma
@@ -62,8 +62,8 @@ module EasyCaptcha
 
         config = self
         canvas = Magick::Image.new(EasyCaptcha.image_width, EasyCaptcha.image_height) do
-          self.background_color = config.image_background_color unless config.image_background_color.nil?
-          self.background_color = 'none' if config.background_image.present?
+          # self.background_color = config.image_background_color unless config.image_background_color.nil?
+          # self.background_color = 'none' if config.background_image.present?
         end
 
         # Render the text in the image
